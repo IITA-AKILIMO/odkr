@@ -110,7 +110,7 @@ pull_remote <- function(target = "",
   }
 
   ## Create command line inputs based on required specifications
-  z <- paste("java -Djavax.net.debug=all -Djava.awt.headless=true -jar ", target, "/", briefcase, ".jar",
+  z <- paste("java -Djava.awt.headless=true -Djavax.net.ssl.trustStore=4 -jar ", target, "/", briefcase, ".jar",
              " --pull_aggregate ",
              " --form_id ", id,
              " --storage_directory ", to,
