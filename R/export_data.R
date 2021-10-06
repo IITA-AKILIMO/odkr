@@ -114,7 +114,7 @@ export_data <- function(target = "",
   }
 
   ## Create command line input based on standard/required specifications
-  z <- paste0("java -jar ", target, "/", briefcase, ".jar",
+  z <- paste0("java -jar -Djava.awt.headless=true ", target, "/", briefcase, ".jar",
              " --export ",
              " --form_id ", id,
              " --storage_directory ", from,

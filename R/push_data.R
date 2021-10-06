@@ -89,7 +89,7 @@ push_data <- function(target = "",
   }
 
   ## Create command line inputs based on required specifications
-  z <- paste("java -jar ", target, "/", briefcase, ".jar",
+  z <- paste("java -jar -Djava.awt.headless=true ", target, "/", briefcase, ".jar",
              " --push_aggregate ",
              " --form_id ", id,
              " --storage_directory ", to,

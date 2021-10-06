@@ -44,7 +44,7 @@ get_help <- function(target = "", briefcase = "odkBriefcase_latest") {
   }
 
   ## Create command line input based on required specifications
-  z <- paste("java -jar ", target, "/", briefcase, ".jar", " --help", sep = "")
+  z <- paste("java -jar -Djava.awt.headless=true ", target, "/", briefcase, ".jar", " --help", sep = "")
 
   ## Execute inputs on command line
   system(z)
