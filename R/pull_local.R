@@ -72,7 +72,7 @@ pull_local <- function(target = "", briefcase = "odkBriefcase_latest",
   }
 
   ## Create command line inputs based on required specifications
-  z <- paste("java -jar ", target, "/", briefcase, ".jar",
+  z <- paste("java -jar -Djava.awt.headless=true ", target, "/", briefcase, ".jar",
              " --pull_collect ",
              " --form_id ", id,
              " --storage_directory ", to,
