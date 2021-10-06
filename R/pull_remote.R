@@ -110,7 +110,7 @@ pull_remote <- function(target = "",
   }
 
   ## Create command line inputs based on required specifications
-  z <- paste("java -Djava.awt.headless=true -Djavax.net.ssl.trustStore=4 -jar ", target, "/", briefcase, ".jar",
+  z <- paste("java -jar -Djava.awt.headless=true ", target, "/", briefcase, ".jar",
              " --pull_aggregate ",
              " --form_id ", id,
              " --storage_directory ", to,
@@ -123,5 +123,6 @@ pull_remote <- function(target = "",
              sep = "")
 
   ## Execute inputs on command line
+  print('Exceuting briefcase jar file')
   system(z)
 }
