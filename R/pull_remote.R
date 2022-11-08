@@ -123,6 +123,6 @@ pull_remote <- function(target = "",
              sep = "")
 
   ## Execute inputs on command line
-  print('Exceuting briefcase jar file')
+  print('Executing briefcase jar file')
   system(z)
 }
